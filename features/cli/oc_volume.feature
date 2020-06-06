@@ -14,8 +14,9 @@ Feature: oc_volume.feature
       | sa_name     | default     |
     Then the step should succeed
     When I run the :run client command with:
-      | name         | mydc                                                                                                          |
-      | image        | quay.io/openshifttest/hello-openshift@sha256:424e57db1f2e8e8ac9087d2f5e8faea6d73811f0b6f96301bc94293680897073 |
+	    | name         | mydc                                                                                                          |
+	    # | image   | quay.io/multiarch-origin-e2e/hello-openshift@sha256:7f88774b116a44605d25252d54b4092cbe243738baaed25b085a06550f00dea8 |
+	    | image        | quay.io/multiarch-origin-e2e/hello-openshift:latest-ppc64le |
     Then the step should succeed
     Given a pod becomes ready with labels:
       | deployment=mydc-1 |

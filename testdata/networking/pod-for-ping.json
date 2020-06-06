@@ -10,7 +10,7 @@
   "spec": {
       "containers": [{
         "name": "hello-pod",
-        "image": "quay.io/openshifttest/pod-for-ping@sha256:f61ca8fd1dd7dfb8d403b66df549ed5a94fc4626d3b19e2530af48aefa75e5ea"
+        "image": "quay.io/multiarch-origin-e2e/pod-for-ping@sha256:1668e3c394d02882da0974f73482985f0b7d41ab3ad94638948df6871dc6781f"
       }]
   }
 }

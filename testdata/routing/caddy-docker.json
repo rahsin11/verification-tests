@@ -11,7 +11,7 @@
   "spec": {
       "containers": [{
         "name": "caddy-docker-pod",
-        "image": "quay.io/openshifttest/caddy-docker@sha256:a88247b9b2a35e0c0a9bc67506971a39fc5a0196b9a1d9ead49ae5fa4b48dfa5",
+        "image": "quay.io/multiarch-origin-e2e/caddy-docker@sha256:1d30976fcd7364586509e3430bf83d2a632ff6c152173077b75160ff673652ff",
         "ports": [
           {
             "containerPort": 8080

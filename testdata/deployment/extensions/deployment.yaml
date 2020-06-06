@@ -11,6 +11,7 @@ spec:
     spec:
       containers:
       - name: hello-openshift
-        image: openshift/hello-openshift
+        image: quay.io/multiarch-origin-e2e/hello-openshift:latest-ppc64le
+        #image: openshift/hello-openshift
         ports:
         - containerPort: 8080
