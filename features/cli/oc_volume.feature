@@ -14,9 +14,8 @@ Feature: oc_volume.feature
       | sa_name     | default     |
     Then the step should succeed
     When I run the :run client command with:
-	    | name         | mydc                                                                                                          |
-	    # | image   | quay.io/multiarch-origin-e2e/hello-openshift@sha256:7f88774b116a44605d25252d54b4092cbe243738baaed25b085a06550f00dea8 |
-	    | image        | quay.io/multiarch-origin-e2e/hello-openshift:latest-ppc64le |
+	    | name         | mydc                                                        |
+	    | image        | openshifttests/hello-openshift:busybox |
     Then the step should succeed
     Given a pod becomes ready with labels:
       | deployment=mydc-1 |
@@ -49,7 +48,8 @@ Feature: oc_volume.feature
     Given I have a project
     When I run the :run client command with:
       | name   | mydc                                                                                                  |
-      | image  | quay.io/openshifttest/storage@sha256:a05b96d373be86f46e76817487027a7f5b8b5f87c0ac18a246b018df11529b40 |
+      # | image  | quay.io/openshifttest/storage@sha256:a05b96d373be86f46e76817487027a7f5b8b5f87c0ac18a246b018df11529b40 |
+      | image  | openshifttests/hello-openshift |
     Then the step should succeed
     When I run the :create_secret client command with:
       | secret_type | generic    |
